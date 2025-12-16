@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills | Syuhadah Moeis</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+/* Header */
+h2 { color:#6a1b9a; text-align:center; margin-bottom:15px; }
+
+/* Container */
+.container { max-width:1200px; margin:20px auto; padding:0 15px; }
+
+/* Card */
+.card {
+  background:#fff;
+  padding:25px;
+  margin-bottom:30px;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* Ordered & Unordered Lists */
+.skills-list ol {
+  list-style: decimal inside;
+  margin-left: 0;
+  padding-left: 0;
+}
+.skills-list ul {
+  list-style: disc inside;
+  margin-left: 0;
+  padding-left: 0;
+}
+.skills-list li {
+  margin-bottom:12px;
+  font-weight:500;
+  font-size:16px;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity:0;
+  transform:translateY(20px);
+  transition:opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible { opacity:1; transform:translateY(0); }
+
+/* Table for Creative & Complexity */
+table { width:100%; border-collapse:collapse; margin-top:20px; }
+th, td { padding:12px; text-align:left; border-bottom:1px solid #ddd; }
+th { background:#6a1b9a; color:#fff; }
+td { font-weight:500; }
+.bar-container { background:#f2e6ff; border-radius:12px; overflow:hidden; }
+.bar { height:24px; background:#6a1b9a; width:0%; transition:width 1.5s ease-out; border-radius:12px; }
+
+/* Hover glow for table rows */
+table tr:hover { transform:scale(1.02); box-shadow:0 4px 15px rgba(106,27,154,0.3); transition:0.3s; }
+
+/* Section title */
+.section-title { text-align:center; color:#6a1b9a; margin-bottom:15px; font-size:22px; }
+
+/* Responsive */
+@media(max-width:800px){
+  .bar { height:20px; }
+  th, td { font-size:14px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a href="index.html">About Me</a>
+  <a href="family.html">Family</a>
+  <a href="skills.html" class="active">Skills</a>
+  <a href="experience.html">Work Experience</a>
+  <a href="education.html">Education</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<header>MY PERSONAL RESUME</header>
+
+<div class="container">
+
+  <!-- Technical Skills -->
+  <section class="card fade-in">
+    <h2 class="section-title">Technical Skills</h2>
+    <ol class="skills-list fade-in">
+      <li><strong>HTML:</strong> Proficient in creating and structuring web pages.</li>
+      <li><strong>CSS:</strong> Skilled in designing responsive websites.</li>
+      <li><strong>JavaScript:</strong> Developing interactive web elements.</li>
+      <li><strong>C++:</strong> Object-oriented programming and data structures.</li>
+      <li><strong>PHP:</strong> Server-side programming and CMS development.</li>
+      <li><strong>SQL:</strong> Database management and query optimization.</li>
+    </ol>
+
+    <!-- Creative & Complexity Table -->
+    <table class="fade-in">
+      <tr>
+        <th>Skill</th>
+        <th>Creativity</th>
+        <th>Complexity</th>
+      </tr>
+      <tr>
+        <td>HTML</td>
+        <td><div class="bar-container"><div class="bar" data-width="90%"></div></div></td>
+        <td><div class="bar-container"><div class="bar" data-width="80%"></div></div></td>
+      </tr>
+      <tr>
+        <td>CSS</td>
+        <td><div class="bar-container"><div class="bar" data-width="85%"></div></div></td>
+        <td><div class="bar-container"><div class="bar" data-width="75%"></div></div></td>
+      </tr>
+      <tr>
+        <td>JavaScript</td>
+        <td><div class="bar-container"><div class="bar" data-width="80%"></div></div></td>
+        <td><div class="bar-container"><div class="bar" data-width="85%"></div></div></td>
+      </tr>
+      <tr>
+        <td>C++</td>
+        <td><div class="bar-container"><div class="bar" data-width="70%"></div></div></td>
+        <td><div class="bar-container"><div class="bar" data-width="80%"></div></div></td>
+      </tr>
+      <tr>
+        <td>PHP</td>
+        <td><div class="bar-container"><div class="bar" data-width="60%"></div></div></td>
+        <td><div class="bar-container"><div class="bar" data-width="70%"></div></div></td>
+      </tr>
+      <tr>
+        <td>SQL</td>
+        <td><div class="bar-container"><div class="bar" data-width="65%"></div></div></td>
+        <td><div class="bar-container"><div class="bar" data-width="75%"></div></div></td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Soft Skills -->
+  <section class="card fade-in">
+    <h2 class="section-title">Soft Skills</h2>
+    <ul class="skills-list fade-in">
+      <li>Effective communication and collaboration.</li>
+      <li>Problem-solving and critical thinking.</li>
+      <li>Time management and organizational skills.</li>
+      <li>Adaptability and willingness to learn.</li>
+      <li>Teamwork and leadership abilities.</li>
+    </ul>
+  </section>
+
+</div>
+
+<footer>&copy; 2025 Syuhadah Moeis</footer>
+
+<script>
+// Fade-in on scroll
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Animate bars
+window.addEventListener('DOMContentLoaded', () => {
+  const bars = document.querySelectorAll('.bar');
+  bars.forEach((bar, index) => {
+    setTimeout(() => {
+      bar.style.width = bar.getAttribute('data-width');
+    }, index*200); // delay tiap bar
+  });
+});
+</script>
+
+</body>
+</html>
+
+
+
+

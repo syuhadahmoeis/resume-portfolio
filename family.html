@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Family | Syuhadah Moeis</title>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- W3Schools + Font Awesome -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- POPUP STYLE (TAMBAHAN SAHAJA) -->
+  <style>
+    .popup-bg {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    .popup-box {
+      background: white;
+      padding: 25px 30px;
+      border-radius: 18px;
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+      animation: pop 0.3s ease;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    }
+
+    .popup-box h3 {
+      color: #ff4fa3;
+      margin-bottom: 12px;
+    }
+
+    .popup-box p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .popup-box button {
+      margin-top: 18px;
+      padding: 8px 18px;
+      border: none;
+      border-radius: 20px;
+      background: linear-gradient(to right, #ff4fa3, #a76bff);
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.85); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    /* cursor hint */
+    .family-member {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="index.html">About Me</a>
+  <a href="family.html">Family</a>
+  <a href="skills.html">Skills</a>
+  <a href="experience.html">Work Experience</a>
+  <a href="education.html">Education</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<header>MY PERSONAL RESUME</header>
+
+<main class="container">
+
+<!-- INTRO -->
+<section class="fade-in">
+  <h2>MY FAMILY</h2>
+  <p class="center-text">
+    This is my beloved family. They are my biggest support system and the source of my strength and happiness.
+  </p>
+</section>
+
+<hr class="divider">
+
+<!-- FULL FAMILY PHOTO (KEKAL) -->
+<section class="fade-in">
+  <img src="fam.jpg" alt="My Family" class="full-family-img">
+  <p class="center-text">
+    A precious moment that reflects love, unity, and togetherness within my family.
+  </p>
+</section>
+
+<hr class="divider">
+
+<!-- FAMILY GRID (3 ATAS + 3 BAWAH) -->
+<section class="fade-in">
+  <h2>FAMILY MEMBERS</h2>
+
+  <div class="family-grid">
+
+    <div class="family-member" onclick="openPopup(
+      'My Father',
+      'My father is a disciplined and hardworking individual. He is the pillar of our family who always motivates us to be responsible, independent, and respectful.'
+    )">
+      <img src="father.jpg" alt="My Father">
+    </div>
+
+    <div class="family-member" onclick="openPopup(
+      'My Mother',
+      'My mother is a caring and loving person. Her patience, kindness, and emotional support keep our family strong and united.'
+    )">
+      <img src="mother.jpg" alt="My Mother">
+    </div>
+
+    <div class="family-member" onclick="openPopup(
+      'First Brother',
+      'My first brother is responsible and mature. He often gives advice and encourages me to stay focused on my goals.'
+    )">
+      <img src="firstbro.jpg" alt="First Brother">
+    </div>
+
+    <div class="family-member" onclick="openPopup(
+      'Second Brother',
+      'My second brother is cheerful and friendly. His positive attitude brings joy and laughter into our home.'
+    )">
+      <img src="secbro.jpg" alt="Second Brother">
+    </div>
+
+    <div class="family-member" onclick="openPopup(
+      'Me',
+      'I am a Diploma in Information Management student who values family as my greatest motivation to achieve success.'
+    )">
+      <img src="me.jpg" alt="Me">
+    </div>
+
+    <div class="family-member" onclick="openPopup(
+      'Little Brother',
+      'My little brother is playful and energetic. His innocence and happiness make our family moments more meaningful.'
+    )">
+      <img src="littlebro.jpg" alt="Little Brother">
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer>&copy; 2025 Syuhadah Moeis</footer>
+
+<!-- POPUP -->
+<div class="popup-bg" id="popup">
+  <div class="popup-box">
+    <h3 id="popupTitle"></h3>
+    <p id="popupText"></p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+</div>
+
+<!-- SCRIPT -->
+<script>
+function openPopup(title, text) {
+  document.getElementById("popupTitle").innerText = title;
+  document.getElementById("popupText").innerText = text;
+  document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+</script>
+
+</body>
+</html>
+

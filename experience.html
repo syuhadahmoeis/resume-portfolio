@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work Experience | Syuhadah Moeis</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+/* Tajuk h2 purple pekat */
+h2 {
+  color: #6a1b9a;
+  margin-bottom: 15px;
+}
+
+/* Container utama */
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+/* Card style untuk setiap section */
+.card {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+}
+
+/* Grid untuk internship photos */
+.intern-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+/* Gambar hover zoom + border glow */
+.intern-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid transparent;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.intern-grid img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(106,27,154,0.7);
+  border: 3px solid #6a1b9a;
+}
+
+/* Deskripsi di bawah gambar */
+.desc {
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  margin-top: 8px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* AEON Mall image hover teks naik */
+.aeon-img-container {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  margin-top: 15px;
+}
+.aeon-img-container img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.aeon-desc {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  color: #fff;
+  background: rgba(106,27,154,0.85);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+.aeon-img-container:hover img {
+  transform: scale(1.05);
+}
+.aeon-img-container:hover .aeon-desc {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">About Me</a>
+  <a href="family.html">Family</a>
+  <a href="skills.html">Skills</a>
+  <a href="experience.html" class="active">Work Experience</a>
+  <a href="education.html">Education</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<header>MY PERSONAL RESUME</header>
+
+<div class="container">
+
+  <!-- Internship Section -->
+  <section class="card fade-in">
+    <h2>Internship</h2>
+    <h3>March 2025 – August 2025</h3>
+    <p>
+      Completed an internship at a law firm, assisting with the organization,
+      classification, and digital management of legal records using professional
+      information management techniques.
+    </p>
+  </section>
+
+  <!-- Internship Photos Grid -->
+  <section class="card fade-in">
+    <h2>Internship Moments at Ahmadnurul & Associates</h2>
+    <div class="intern-grid">
+      <div>
+        <img src="intern1.jpg" alt="Internship photo 1">
+        <div class="desc">Maintained secure, accessible digital files for the firm.</div>
+      </div>
+      <div>
+        <img src="intern2.jpg" alt="Internship photo 2">
+        <div class="desc">Collaborated with senior staff on digitization projects.</div>
+      </div>
+      <div>
+        <img src="intern3.jpg" alt="Internship photo 3">
+        <div class="desc">Organized legal documents efficiently for case preparation.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AEON Mall Section -->
+  <section class="card fade-in">
+    <h2>AEON Mall</h2>
+    <h3>March 2023 – July 2023</h3>
+    <p>
+      Worked as a part-time retail assistant, supporting customer service,
+      cashier operations, inventory management, and daily store organization.
+    </p>
+  </section>
+
+<!-- AEON Mall Photos Grid -->
+<section class="card fade-in">
+  <h2>AEON Mall Moments</h2>
+  <div class="intern-grid"> <!-- guna class sama untuk consistency -->
+    <div>
+      <img src="aeon1.jpg" alt="AEON photo 1">
+      <div class="desc">Scanning coding materials shows the process of digitizing information.</div>
+    </div>
+    <div>
+      <img src="aeon2.jpg" alt="AEON photo 2">
+      <div class="desc">Scanning items as a cashier involves recording transaction data accurately using a computerized system.</div>
+    </div>
+    <div>
+      <img src="aeon3.jpg" alt="AEON photo 3">
+      <div class="desc">Arranging items requires organizing and categorizing resources properly.</div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<footer>&copy; 2025 Syuhadah Moeis</footer>
+
+<script>
+/* Fade-in on scroll */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.fade-in, .intern-grid img, .desc, .aeon-img-container img').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
+
+
+
+
+

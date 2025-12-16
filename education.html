@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Education | Syuhadah Moeis</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+h2 { color:#6a1b9a; }
+
+/* Container */
+.container{
+  max-width:1200px;
+  margin:20px auto;
+  padding:0 15px;
+}
+
+/* Card */
+.card{
+  background:#fff;
+  padding:20px;
+  margin-bottom:30px;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* TOP ANCHOR */
+.top-anchor{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  margin-bottom:30px;
+}
+.top-anchor a{
+  padding:8px 18px;
+  background:#6a1b9a;
+  color:#fff;
+  border-radius:20px;
+  text-decoration:none;
+  font-weight:600;
+}
+.top-anchor a:hover{
+  background:#ff4fa3;
+}
+
+/* GALLERY GRID */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  margin-top:15px;
+}
+.gallery img, .gallery video{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+  border-radius:12px;
+}
+
+/* COLLAPSIBLE (DETAILS) */
+details{
+  margin-top:15px;
+}
+summary{
+  cursor:pointer;
+  background:#f2e6ff;
+  color:#6a1b9a;
+  padding:10px 16px;
+  border-radius:20px;
+  font-weight:600;
+  width:fit-content;
+}
+summary:hover{
+  background:#6a1b9a;
+  color:#fff;
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .gallery{ grid-template-columns:repeat(2,1fr); }
+}
+@media(max-width:600px){
+  .gallery{ grid-template-columns:1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">About Me</a>
+  <a href="family.html">Family</a>
+  <a href="skills.html">Skills</a>
+  <a href="experience.html">Work Experience</a>
+  <a href="education.html" class="active">Education</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<header>MY PERSONAL RESUME</header>
+
+<div class="container">
+
+<!-- TOP ANCHOR -->
+<div class="top-anchor">
+  <a href="#uitm">UiTM</a>
+  <a href="#highschool">High School</a>
+  <a href="#primary">Primary School</a>
+</div>
+
+<!-- ================= UiTM ================= -->
+<section id="uitm" class="card">
+<h2>Diploma in Information Management</h2>
+<p><strong>UiTM Johor, Kampus Segamat</strong></p>
+<p>2023 – 2026</p>
+
+<details>
+  <summary>View UiTM Gallery & Videos</summary>
+  <div class="gallery">
+    <img src="uitmlogo.png">
+    <img src="classmate.jpg">
+    <img src="club.jpg">
+ <img src="uitm1.jpg">
+<img src="uitm2.jpg">
+<img src="uitm3.jpg">
+<img src="uitm4.jpg">
+<img src="uitm5.jpg">
+<img src="uitm6.jpg">
+<img src="uitm7.jpg">
+<img src="uitm8.jpg">
+<img src="uitm9.jpg">
+<img src="uitm10.jpg">
+<img src="uitm11.jpg">
+    <video controls src="mds.vid.mp4"></video>
+    <video controls src="perkom.vid.mp4"></video>
+ <video controls src="unr.vid.mp4"></video>
+ <video controls src="club.vid.mp4"></video>
+
+
+  </div>
+</details>
+</section>
+
+<!-- ================= HIGH SCHOOL ================= -->
+<section id="highschool" class="card">
+<h2>High School</h2>
+<p><strong>SMK Sultan Abdul Samad, Klang</strong></p>
+<p>2018 – 2022</p>
+
+<details>
+  <summary>View High School Gallery & Videos</summary>
+  <div class="gallery">
+    <img src="logo.jpg">
+    <img src="spm.jpg">
+    <img src="graduation.jpg">
+     <img src="smk1.jpg">
+<img src="smk2.jpg">
+<img src="smk3.jpg">
+<img src="smk4.jpg">
+<img src="smk5.jpg">
+<img src="smk6.jpg">
+<img src="smk7.jpg">
+<img src="smk9.jpg">
+<img src="smk10.jpg">
+<img src="smk11.jpg">
+<img src="smk12.jpg">
+<img src="smk13.jpg">
+  </div>
+</details>
+</section>
+
+<!-- ================= PRIMARY ================= -->
+<section id="primary" class="card">
+<h2>Primary School</h2>
+<p><strong>SK 1 Jalan Meru, Klang</strong></p>
+<p>2012 – 2017</p>
+
+<details>
+  <summary>View Primary School Gallery </summary>
+  <div class="gallery">
+    <img src="logosk.jpg">
+    <img src="upsr.jpg">
+    <img src="6W.jpg">
+    
+  </div>
+</details>
+</section>
+
+</div>
+
+<footer>&copy; 2025 Syuhadah Moeis</footer>
+
+</body>
+</html>
+
+
+
+
