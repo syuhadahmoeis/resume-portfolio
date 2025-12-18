@@ -1,0 +1,125 @@
+<script>
+/* CLOCK */
+setInterval(()=>{
+document.getElementById("liveClock").innerHTML =
+new Date().toLocaleTimeString();
+},1000);
+
+/* NOTIFICATION */
+document.getElementById("notifBtn").onclick=async()=>{
+if(await Notification.requestPermission()==="granted"){
+new Notification("Syuhadah Moeis",{body:"Welcome to my digital resume"});
+}
+};
+
+/* TYPING EFFECT */
+const texts=[
+"to the digital resume of Nur Syuhadah Moeis.",
+"Focused on records and digital organization.",
+"Building a professional digital portfolio."
+];
+let i=0,j=0;
+(function type(){
+document.getElementById("typingText").textContent=texts[i].slice(0,++j);
+if(j===texts[i].length){
+setTimeout(()=>{j=0;i=(i+1)%texts.length;},1800);
+}
+setTimeout(type,80);
+})();
+
+/* SCROLL ANIMATION */
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(e=>e.isIntersecting&&e.target.classList.add("visible"));
+});
+document.querySelectorAll(".enter").forEach(el=>observer.observe(el));
+</script>
+
+<script>
+/* CLOCK */
+setInterval(()=>{
+document.getElementById("liveClock").innerHTML =
+new Date().toLocaleTimeString();
+},1000);
+
+/* NOTIFICATION */
+document.getElementById("notifBtn").onclick=async()=>{
+if(await Notification.requestPermission()==="granted"){
+new Notification("Syuhadah Moeis",{body:"Welcome to my digital resume"});
+}
+};
+
+/* TYPING EFFECT */
+const texts=[
+"to the digital resume of Nur Syuhadah Moeis.",
+"Focused on records and digital organization.",
+"Building a professional digital portfolio."
+];
+let i=0,j=0;
+(function type(){
+document.getElementById("typingText").textContent=texts[i].slice(0,++j);
+if(j===texts[i].length){
+setTimeout(()=>{j=0;i=(i+1)%texts.length;},1800);
+}
+setTimeout(type,80);
+})();
+
+/* SCROLL ANIMATION */
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(e=>e.isIntersecting&&e.target.classList.add("visible"));
+});
+document.querySelectorAll(".enter").forEach(el=>observer.observe(el));
+</script>
+
+
+<script>
+// Fade-in on scroll
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Animate bars
+window.addEventListener('DOMContentLoaded', () => {
+  const bars = document.querySelectorAll('.bar');
+  bars.forEach((bar, index) => {
+    setTimeout(() => {
+      bar.style.width = bar.getAttribute('data-width');
+    }, index*200); // delay tiap bar
+  });
+});
+</script>
+
+
+<script>
+/* Fade-in on scroll */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.fade-in, .intern-grid img, .desc, .aeon-img-container img').forEach(el => observer.observe(el));
+</script>
+
+<script>
+/* Fade-in on scroll */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+
+
+
+
