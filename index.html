@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me | Syuhadah Moeis</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* HEADER */
+.header-top{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+.clock{
+  background:rgba(255,255,255,0.15);
+  padding:8px 14px;
+  border-radius:10px;
+  font-weight:700;
+  color:#fff;
+}
+
+.notify-btn{
+  background:rgba(255,255,255,0.15);
+  border:1px solid rgba(255,255,255,.25);
+  color:#fff;
+  padding:8px 14px;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+/* ENTER ANIMATION */
+.enter{
+  opacity:0;
+  transform:translateY(20px);
+  transition:.6s ease;
+}
+.enter.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* SUPER MARQUEE */
+.super-marquee{
+  background:#1f1f1f;
+  padding:10px 0;
+  overflow:hidden;
+  border-bottom:1px solid rgba(255,255,255,.15);
+}
+
+.super-track{
+  white-space:nowrap;
+  animation:scroll 18s linear infinite;
+}
+
+.super-track span{
+  color:#d1c7b7;
+  font-weight:700;
+  letter-spacing:1.2px;
+}
+
+@keyframes scroll{
+  from{ transform:translateX(100%); }
+  to{ transform:translateX(-100%); }
+}
+
+/* TYPING BAR */
+.typing-bar{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:6px;
+  padding:12px;
+  background:rgba(30,30,30,.6);
+  backdrop-filter:blur(8px);
+  font-size:14px;
+}
+
+.typing-label{
+  color:#bfa76f;
+  font-weight:600;
+}
+
+#typingText{
+  color:#eaeaea;
+}
+
+.cursor{
+  color:#bfa76f;
+  animation:blink 1s infinite;
+}
+
+@keyframes blink{
+  0%,50%,100%{opacity:1}
+  25%,75%{opacity:0}
+}
+
+/* SPOTIFY */
+.spotify-box{
+  background:rgba(255,255,255,0.15);
+  padding:16px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,.25);
+  max-width:700px;
+  margin:auto;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html">About Me</a>
+  <a href="family.html">Family</a>
+  <a href="skills.html">Skills</a>
+  <a href="experience.html">Work Experience</a>
+  <a href="education.html">Education</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- MARQUEE -->
+<div class="super-marquee enter">
+  <div class="super-track">
+    <span>✨ TO THE DIGITAL RESUME OF NUR SYUHADAH MOEIS ✨</span>
+  </div>
+</div>
+
+<!-- TYPING -->
+<div class="typing-bar enter">
+  <span class="typing-label">Welcome</span>
+  <span id="typingText"></span>
+  <span class="cursor">|</span>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-top">
+    <div style="text-align:center;">
+      <div style="font-size:20px;font-weight:800;">MY PERSONAL RESUME</div>
+      <div style="font-size:13px;">Nur Syuhadah Moeis</div>
+    </div>
+    <div id="liveClock" class="clock">00:00:00</div>
+    <button id="notifBtn" class="notify-btn">Enable Notifications</button>
+  </div>
+</header>
+
+<main class="container"> <!-- SPOTIFY SECTION --> <section class="enter"> <div class="spotify-box"> <a href="player.html" target="player_window" onclick="window.open('player.html','player_window','width=320,height=120'); return false;">🎵 Music</a> <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4cOdK2wGLETKBW3PvgPWqT" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"> </iframe> </div> </section> <hr class="divider enter">
+
+
+
+<section class="enter">
+<h2>ABOUT ME</h2>
+<div class="about">
+<img src="syu.jpg.jpg" alt="Nur Syuhadah">
+<div class="about-text">
+<p><strong>Name:</strong> Nur Syuhadah Binti Moeis</p>
+<p><strong>Birth Date:</strong> 13 November 2005</p>
+<p><strong>Birth Place:</strong> HTAR Klang</p>
+<p><strong>Based:</strong> Klang, Selangor</p>
+</div>
+</div>
+</section>
+<hr class="divider enter"> <!-- CONTACT --> <section class="enter"> <h2>CONTACT INFORMATION</h2> <div class="card"> <p><i class="fa fa-envelope"></i> <a href="mailto:syuhadahmoeis@gmail.com">syuhadahmoeis@gmail.com</a> </p> <p><i class="fa fa-phone"></i> (+60) 11-5145 8519</p> </div> </section> <hr class="divider enter"> <!-- EDUCATION --> <section class="enter"> <h2>EDUCATION</h2> <div class="timeline"> <div class="timeline-item"> <div class="timeline-dot"></div> <div class="timeline-content"> <h4>SK 1 Jalan Meru, Klang</h4> <p>(2012 – 2017)</p> </div> </div> <div class="timeline-item"> <div class="timeline-dot"></div> <div class="timeline-content"> <h4>SMK Sultan Abdul Samad, Klang</h4> <p>Science Computer & Sport Science (2018 – 2022)</p> </div> </div> <div class="timeline-item"> <div class="timeline-dot"></div> <div class="timeline-content"> <h4>UiTM Segamat, Johor</h4> <p>Diploma in Information Management (2023 – 2026)</p> </div> </div> </div> </section> <hr class="divider enter"> <!-- WORK EXPERIENCE --> <section class="enter"> <h2>WORK EXPERIENCE</h2> <div class="timeline"> <div class="timeline-item"> <div class="timeline-dot"></div> <div class="timeline-content"> <h4>AEON Mall</h4> <p>Part-Time Retail Assistant</p> </div> </div> <div class="timeline-item"> <div class="timeline-dot"></div> <div class="timeline-content"> <h4>Ahmad Nurul & Associates</h4> <p>Internship Student</p> </div> </div> </div> </section> <hr class="divider enter"> <!-- SKILLS --> <section class="enter"> <h2>SKILLS</h2> <div class="skills-bars"> <div class="skill-bar"> <span>C++</span> <div class="bar"><div class="fill" style="width:85%"></div></div> </div> <div class="skill-bar"> <span>Java</span> <div class="bar"><div class="fill" style="width:80%"></div></div> </div> <div class="skill-bar"> <span>JavaScript</span> <div class="bar"><div class="fill" style="width:75%"></div></div> </div> <div class="skill-bar"> <span>Responsive Web Design</span> <div class="bar"><div class="fill" style="width:90%"></div></div> </div> </div> </section>
+</main>
+
+<footer>&copy; 2025 Syuhadah Moeis</footer>
+
+<script>
+/* CLOCK */
+setInterval(()=>{
+document.getElementById("liveClock").innerHTML =
+new Date().toLocaleTimeString();
+},1000);
+
+/* NOTIFICATION */
+document.getElementById("notifBtn").onclick=async()=>{
+if(await Notification.requestPermission()==="granted"){
+new Notification("Syuhadah Moeis",{body:"Welcome to my digital resume"});
+}
+};
+
+/* TYPING EFFECT */
+const texts=[
+"to the digital resume of Nur Syuhadah Moeis.",
+"Focused on records and digital organization.",
+"Building a professional digital portfolio."
+];
+let i=0,j=0;
+(function type(){
+document.getElementById("typingText").textContent=texts[i].slice(0,++j);
+if(j===texts[i].length){
+setTimeout(()=>{j=0;i=(i+1)%texts.length;},1800);
+}
+setTimeout(type,80);
+})();
+
+/* SCROLL ANIMATION */
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(e=>e.isIntersecting&&e.target.classList.add("visible"));
+});
+document.querySelectorAll(".enter").forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
+
+
+
+
